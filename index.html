@@ -1,172 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tarangini Karoor | Data Analyst</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Poppins', sans-serif; line-height: 1.6; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tarangini Karoor | Data Analyst</title>
 
-    header {
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
-      animation: fadeIn 1.5s ease-in;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-    .profile-img {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 4px solid white;
-      margin-bottom: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
+<style>
+:root{
+--bg:#0b1220;
+--card:#111827;
+--text:#e5e7eb;
+--accent:#38bdf8;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins;}
+body{background:var(--bg);color:var(--text);}
 
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      background: #333;
-      position: sticky;
-      top: 0;
-      flex-wrap: wrap;
-    }
+nav{
+position:fixed;width:100%;
+background:#000000cc;
+backdrop-filter:blur(10px);
+display:flex;justify-content:space-between;
+padding:12px 20px;z-index:1000;
+}
+nav a{color:white;margin:0 10px;text-decoration:none;font-size:14px;}
 
-    nav a { color: white; text-decoration: none; font-size: 0.9rem; }
+.hero{
+height:100vh;
+background:linear-gradient(135deg,#1f2937,#0b1220);
+display:flex;align-items:center;padding:40px;position:relative;
+}
+.hero::after{
+content:"";position:absolute;inset:0;background:rgba(0,0,0,0.7);
+}
+.hero-content{position:relative;}
+.hero img{
+width:110px;height:110px;border-radius:50%;
+border:2px solid #38bdf8;margin-bottom:10px;object-fit:cover;
+}
+.hero h1{
+font-size:42px;
+background:linear-gradient(90deg,#38bdf8,#7c3aed);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+}
 
-    section { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    h2 { margin-bottom: 20px; }
+section{padding:80px 10%;}
 
-    .card {
-      background: #f9f9f9;
-      padding: 20px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
+.card{
+background:var(--card);
+padding:20px;border-radius:12px;
+margin-bottom:20px;
+transition:0.3s;
+}
+.card:hover{transform:translateY(-5px);}
 
-    .card:hover { transform: translateY(-5px); }
+.fade{
+opacity:0;transform:translateY(40px);
+transition:0.6s;
+}
+.fade.show{
+opacity:1;transform:translateY(0);
+}
 
-    .skills span {
-      display: inline-block;
-      background: #e0f7fa;
-      padding: 8px 12px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 0.8rem;
-    }
+table{width:100%;border-collapse:collapse;}
+td{padding:10px;border-bottom:1px solid #333;}
 
-    ul { margin-left: 18px; }
-
-    footer { text-align: center; padding: 20px; background: #333; color: white; }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (min-width: 768px) {
-      header h1 { font-size: 3rem; }
-    }
-  </style>
+@media(max-width:768px){
+.hero h1{font-size:28px;}
+}
+</style>
 </head>
+
 <body>
 
-<header>
-  <img src="profile.jpg" alt="Tarangini Karoor" class="profile-img" />
-  <h1>Tarangini Karoor</h1>
-  <p>Data Analyst | SQL • Python • SAS • Tableau</p>
-</header>
-
 <nav>
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#experience">Experience</a>
-  <a href="#education">Education</a>
-  <a href="#contact">Contact</a>
+<div><b>Tarangini Karoor</b></div>
+<div>
+<a href="#summary">Summary</a>
+<a href="#competencies">Competencies</a>
+<a href="#experience">Experience</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
-<section id="about">
-  <h2>Summary</h2>
-  <p>Data analytics professional with 10+ years of experience building automated, scalable data solutions across financial, healthcare, and economic domains. Strong in translating business requirements into data-driven insights, building dashboards, and ensuring data quality and automation.</p>
+<section class="hero">
+<div class="hero-content">
+<img src="profile.jpg">
+<h1>Tarangini Karoor</h1>
+<p>Data Analyst | SQL • Python • SAS • Tableau</p>
+<p>10+ Years | Finance • Healthcare • Economic Data</p>
+</div>
 </section>
 
-<section id="skills">
-  <h2>Technical Skills</h2>
-  <div class="skills">
-    <span>SQL</span><span>SAS</span><span>Python</span><span>Tableau</span><span>Power BI</span>
-    <span>Oracle</span><span>SQL Server</span><span>GCP</span><span>AWS</span><span>Databricks</span>
-    <span>ETL Pipelines</span><span>EDA</span><span>Forecasting</span><span>Anomaly Detection</span>
-    <span>Excel</span><span>Alteryx</span>
-  </div>
+<section id="summary" class="fade">
+<h2>Professional Summary</h2>
+<div class="card">
+Data analytics professional with 10+ years of experience building automated, scalable data solutions using SQL, Python, and SAS across financial, healthcare, and economic domains. Proven ability to translate stakeholder needs into requirements, define metrics, and build dashboards delivering actionable insights. Strong focus on data quality, automation, and cross-functional collaboration.
+</div>
 </section>
 
-<section id="experience">
-  <h2>Experience</h2>
+<section id="competencies" class="fade">
+<h2>Core Competencies</h2>
+<div class="card">
+Data Analysis • ETL Pipelines • Forecasting • KPI Development • Data Quality • Dashboarding • Stakeholder Collaboration • Data Storytelling • Automation • Trend & Variance Analysis • Predictive Insights
+</div>
+</section>
 
-  <div class="card">
-    <h3>Bureau of Labor Statistics (2022–2024)</h3>
-    <ul>
-      <li>Built Python + SQL pipelines processing 40,000+ records annually for forecasting datasets</li>
-      <li>Performed segmentation across 20+ demographic groups improving forecast accuracy</li>
-      <li>Reduced reporting time by 30% via dashboards and automation</li>
-      <li>Improved data quality through testing, reviews, and debugging workflows</li>
-    </ul>
-  </div>
+<section id="experience" class="fade">
+<h2>Professional Experience</h2>
 
-  <div class="card">
-    <h3>Cave Consulting Group (2020–2022)</h3>
-    <ul>
-      <li>Built SQL + SAS pipelines analyzing large-scale healthcare claims data</li>
-      <li>Identified cost drivers leading to 10–20% reduction in employer healthcare spending</li>
-      <li>Defined standardized metrics and delivered dashboards for decision-making</li>
-    </ul>
-  </div>
+<div class="card">
+<h3>Bureau of Labor Statistics | Sr Data Analyst (2022 – 2024)</h3>
+<ul>
+<li>Built Python and SQL pipelines processing 40,000+ records annually for forecasting datasets</li>
+<li>Performed segmentation across 20+ demographic groups to improve forecast accuracy</li>
+<li>Reduced reporting time by 30% through automated dashboards</li>
+<li>Improved data quality via testing, code reviews, and debugging workflows</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h3>Bureau of Labor Statistics (2019–2020)</h3>
-    <ul>
-      <li>Analyzed 8M+ records for economic and policy datasets</li>
-      <li>Improved data completeness by 20% using imputation techniques</li>
-      <li>Delivered 12+ production datasets for federal reporting</li>
-    </ul>
-  </div>
+<div class="card">
+<h3>Cave Consulting Group | Sr Data Analyst (2020 – 2022)</h3>
+<ul>
+<li>Developed SQL and SAS pipelines analyzing large-scale healthcare claims data</li>
+<li>Identified cost drivers reducing employer healthcare spend by 10–20%</li>
+<li>Defined standardized metrics and built dashboards for decision-making</li>
+</ul>
+</div>
 
-  <div class="card">
-    <h3>USAA (2014–2019)</h3>
-    <ul>
-      <li>Processed 40M+ records supporting risk and finance reporting</li>
-      <li>Created 10+ KPIs including FICO segmentation and delinquency tiers</li>
-      <li>Built dashboards for portfolio health and stakeholder visibility</li>
-      <li>Designed A/B test to evaluate credit card product performance</li>
-    </ul>
-  </div>
+<div class="card">
+<h3>Bureau of Labor Statistics | Data Analyst (2019 – 2020)</h3>
+<ul>
+<li>Analyzed 8M+ records supporting economic and policy datasets</li>
+<li>Improved data completeness by 20% using imputation techniques</li>
+<li>Delivered 12+ production datasets for federal reporting</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>USAA | Data Analyst (2014 – 2019)</h3>
+<ul>
+<li>Processed 40M+ records supporting finance and risk reporting</li>
+<li>Created 10+ KPIs including FICO segmentation and delinquency tiers</li>
+<li>Built dashboards improving portfolio visibility</li>
+<li>Designed A/B test evaluating credit card product performance</li>
+</ul>
+</div>
 
 </section>
 
-<section id="education">
-  <h2>Education</h2>
-  <p><strong>M.S., Electrical & Computer Engineering</strong> – Kansas State University</p>
-  <p><strong>B.E., Electrical & Electronic Engineering</strong> – Vasavi College of Engineering</p>
+<section id="skills" class="fade">
+<h2>Technical Skills</h2>
+<table>
+<tr><td>Programming</td><td>SQL, Python, SAS</td></tr>
+<tr><td>Databases</td><td>Oracle, SQL Server</td></tr>
+<tr><td>Analytics</td><td>EDA, Forecasting, Trend Analysis, Anomaly Detection</td></tr>
+<tr><td>BI Tools</td><td>Tableau, Power BI</td></tr>
+<tr><td>Data Engineering</td><td>ETL Pipelines, Automation</td></tr>
+<tr><td>Cloud</td><td>AWS (S3, EC2), GCP (BigQuery, Dataflow), Databricks</td></tr>
+<tr><td>Tools</td><td>Excel, Alteryx, JIRA, Confluence</td></tr>
+</table>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: tara.karoor@gmail.com</p>
-  <p>GitHub: github.com/tkaroor</p>
-  <p>LinkedIn: linkedin.com/in/tarangini-karoor-1b542816a</p>
+<section id="education" class="fade">
+<h2>Education</h2>
+<div class="card">
+M.S., Electrical & Computer Engineering – Kansas State University<br><br>
+B.E., Electrical & Electronic Engineering – Vasavi College of Engineering
+</div>
 </section>
 
-<footer>
-  <p>© 2026 Tarangini Karoor</p>
-</footer>
+<section id="contact" class="fade">
+<h2>Contact</h2>
+<div class="card">
+Email: tara.karoor@gmail.com<br>
+GitHub: github.com/tkaroor<br>
+LinkedIn: linkedin.com/in/tarangini-karoor-1b542816a
+</div>
+</section>
+
+<script>
+const els=document.querySelectorAll('.fade');
+window.addEventListener('scroll',()=>{
+els.forEach(el=>{
+if(el.getBoundingClientRect().top<window.innerHeight-100){
+el.classList.add('show');
+}
+});
+});
+</script>
 
 </body>
 </html>
